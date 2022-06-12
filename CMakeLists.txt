@@ -16,7 +16,8 @@ else()
 endif()
 
 include_directories(Vendor/glad/include/
-                    Vendor/glfw/include/)
+                    Vendor/glfw/include/
+                    Vendor/stb/)
 
 file(GLOB VENDORS_SOURCES Vendor/glad/src/glad.c)
 file(GLOB PROJECT_HEADERS Source/*.h)
@@ -25,9 +26,9 @@ file(GLOB PROJECT_SHADERS Shaders/*.frag
                           Shaders/*.vert)
 
 file(GLOB PROJECT_CONFIGS CMakeLists.txt
-        .gitattributes
-        .gitignore
-        .gitmodules)
+                          .gitattributes
+                          .gitignore
+                          .gitmodules)
 
 source_group("Source" FILES ${PROJECT_SOURCES})
 
